@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FL Studio — Web Playlist (Phase 1)</title>
+
+  <!-- WaveSurfer -->
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <header id="topbar">
+    <div id="brand">FL Studio — Web (Phase 1)</div>
+    <div id="controls">
+      <input id="fileInput" type="file" accept=".mp3,.wav,.m4a,.ogg,.mp4,.mov" />
+      <button id="addTrackBtn">+ Track</button>
+      <button id="dropModeBtn">Drop Mode</button>
+      <label class="zoom-label">Zoom</label>
+      <input id="zoomRange" type="range" min="50" max="2000" value="400">
+      <button id="zoomIn">+</button>
+      <button id="zoomOut">-</button>
+      <button id="playAll">Play</button>
+      <button id="stopAll">Stop</button>
+      <button id="exportRegionBtn">Export Region</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <aside id="tracklist"></aside>
+
+    <section id="playlist-area">
+      <div id="timeline"><div id="timeRuler"></div></div>
+      <div id="tracksContainer"></div>
+    </section>
+  </main>
+
+  <div id="help">Double-click waveform to create a 1s region. Select a region and press <b>Export Region</b> to download.</div>
+
+  <script src="static/js/app.js"></script>
+</body>
+</html>
